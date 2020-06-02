@@ -23,7 +23,7 @@
 ## 安装
 
 ```shell
-$ composer require "kang/easy-51tracking"
+$ composer require lvar/easy-51tracking
 ```
 
 ## 使用
