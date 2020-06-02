@@ -2,7 +2,7 @@
 /*
  * This is a config file
  *
- * (c) kang <625079860@qq.com>
+ * (c) ivar <625079860@qq.com>
  *
  * Date: 2020/6/1 下午8:46
  *
@@ -10,7 +10,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Kang\Easy51Tracking\Support;
+namespace Ivar\Easy51Tracking\Support;
 
 use ArrayAccess;
 

@@ -32,7 +32,7 @@ $ composer require lvar/easy-51tracking
 ```php
 <?php
 
-use Kang\Easy51Tracking\Easy51Tracking;
+use Ivar\Easy51Tracking\Easy51Tracking;
 
 $config = [
     'tracking_api_key' => 'xxxxxx',

@@ -1,5 +1,5 @@
 {
-    "name": "lvar/easy-51tracking",
+    "name": "ivar/easy-51tracking",
     "description": "the easiest way to operate 51tracking",
     "type": "library",
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kang\\Easy51Tracking\\": "src"
+            "Ivar\\Easy51Tracking\\": "src"
         }
     }
 }

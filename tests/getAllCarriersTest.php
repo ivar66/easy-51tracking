@@ -2,7 +2,7 @@
 /*
  * This is a new PhpStorm file.
  *
- * (c) kang <625079860@qq.com>
+ * (c) ivar <625079860@qq.com>
  *
  * Date: 2020/6/1 下午11:39
  *
@@ -11,7 +11,7 @@
  */
 require_once '../vendor/autoload.php';
 
-use Kang\Easy51Tracking\Easy51Tracking;
+use Ivar\Easy51Tracking\Easy51Tracking;
 
 $config = [
 //    'tracking_api_key' => 'ecff5895-8548-4a60-b4ff-3f9fc45969a9',
@@ -20,3 +20,4 @@ $config = [
 
 $obj = new Easy51Tracking($config);
 $arrayAllCarriers = $obj->getAllCarriers();
+var_export($arrayAllCarriers);die();
