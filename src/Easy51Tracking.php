@@ -22,6 +22,7 @@ class Easy51Tracking{
     use Traits\HasBuildParam;
 
     /**
+     * tracking config
      * @var
      */
     protected $config;
@@ -31,6 +32,7 @@ class Easy51Tracking{
      * @var array
      */
     protected $header;
+
     /**
      *  base URL
      */
@@ -88,6 +90,7 @@ class Easy51Tracking{
 
     /**
      * get one order tracking by tracking number
+     *
      * api doc：https://www.51tracking.com/api-track-get-a-single-tracking-results#single-get
      *
      * @param  string     $carrierCode
@@ -105,6 +108,7 @@ class Easy51Tracking{
 
     /**
      * update one order tracking by tracking number
+     *
      * api doc : https://www.51tracking.com/api-track-update-tracking-item#single-put
      *
      * @param string $carrierCode
