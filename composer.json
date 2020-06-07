@@ -5,11 +5,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "kang",
+            "name": "ivar",
             "email": "625079860@qq.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "guzzlehttp/guzzle": "^6.2",
         "php": ">=5.6",

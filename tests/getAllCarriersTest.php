@@ -14,10 +14,10 @@ require_once '../vendor/autoload.php';
 use Ivar\Easy51Tracking\Easy51Tracking;
 
 $config = [
-//    'tracking_api_key' => 'ecff5895-8548-4a60-b4ff-3f9fc45969a9',
-    'tracking_api_key' => 'af036741-f14f-4116-9816-1765a341fcfc',
+    'tracking_api_key' => '自己申请',
 ];
 
 $obj = new Easy51Tracking($config);
 $arrayAllCarriers = $obj->getAllCarriers();
-var_export($arrayAllCarriers);die();
+// 物流商编码存储一下
+file_put_contents('./tracking_carriers.txt',json_encode($arrayAllCarriers));

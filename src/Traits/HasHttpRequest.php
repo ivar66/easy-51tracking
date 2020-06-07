@@ -41,16 +41,17 @@ trait HasHttpRequest
      * Make a post request.
      *
      * @param string $endpoint
-     * @param array  $params
-     * @param array  $headers
+     * @param array $params
+     * @param array $headers
+     * @param string $reqType
      *
      * @return array
      */
-    protected function post($endpoint, $params = [], $headers = [])
+    protected function post($endpoint, $params = [], $headers = [],$reqType = 'json')
     {
         return $this->request('post', $endpoint, [
             'headers' => $headers,
-            'form_params' => $params,
+            "{$reqType}" => $params,
         ]);
     }
 
@@ -123,9 +124,9 @@ trait HasHttpRequest
      */
     protected function unwrapResponse(ResponseInterface $response)
     {
+
         $contentType = $response->getHeaderLine('Content-Type');
         $contents = $response->getBody()->getContents();
-
         if (false !== stripos($contentType, 'json') || stripos($contentType, 'javascript')) {
             return json_decode($contents, true);
         } elseif (false !== stripos($contentType, 'xml')) {

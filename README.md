@@ -1,6 +1,6 @@
 <h1 align="center">Easy 51Tracking</h1>
 
-<p align="center">:calling: 一款满足51tracking，查询快递地址等的组件</p>
+<p align="center">:mailbox: 一款满足51tracking，查询快递物流信息等的组件</p>
 
 
 
@@ -42,6 +42,44 @@ $obj = new Easy51Tracking($config);
 $arrayAllCarriers = $obj->getAllCarriers();
 ```
 
+创建单个运单号
+
+```php
+
+<?php
+use Ivar\Easy51Tracking\Easy51Tracking;
+
+$config = [
+    'tracking_api_key' => '自己申请',
+];
+$params = [
+    'tracking_number' => '10145425944960136xx',
+    'carrier_code'    => 'bestex',
+    //... 若干别的信息，可查api文档
+];
+
+$obj = new Easy51Tracking($config);
+$result = $obj->create($params);
+
+```
+
+列出单个运单号物流信息
+```php
+
+<?php
+use Ivar\Easy51Tracking\Easy51Tracking;
+
+$config = [
+    'tracking_api_key' => '自己申请',
+];
+
+$tracking_number = '物流运单号';
+$carrier_code    = '运输商编码';
+
+$obj = new Easy51Tracking($config);
+$result = $obj->getOrderTrackingByNumber($carrier_code,$tracking_number);
+
+```
 ## License
 
 MIT
