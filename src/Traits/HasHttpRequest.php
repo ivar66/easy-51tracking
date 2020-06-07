@@ -47,7 +47,7 @@ trait HasHttpRequest
      *
      * @return array
      */
-    protected function post($endpoint, $params = [], $headers = [],$reqType = 'json')
+    protected function post($endpoint, $params = [], $headers = [],$reqType = 'form_params')
     {
         return $this->request('post', $endpoint, [
             'headers' => $headers,

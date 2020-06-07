@@ -79,7 +79,7 @@ class Easy51Tracking{
 
         $endpoint = $this->_buildEndpoint('/trackings/post');
 
-        return $this->post($endpoint,$arrReq,$this->header);
+        return $this->postJson($endpoint,$arrReq,$this->header);
     }
 
     /**
