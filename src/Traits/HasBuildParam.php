@@ -17,6 +17,7 @@ trait HasBuildParam{
 
     /**
      * format url
+     *
      * @param $endpoint
      * @return string
      */
@@ -26,6 +27,7 @@ trait HasBuildParam{
 
     /**
      * build create tracking order
+     *
      * @param $params
      * @return array
      * @throws InvalidArgumentException

@@ -35,7 +35,7 @@ $ composer require lvar/easy-51tracking
 use Ivar\Easy51Tracking\Easy51Tracking;
 
 $config = [
-    'tracking_api_key' => 'xxxxxx',
+    'tracking_api_key' => '自己申请',
 ];
 
 $obj = new Easy51Tracking($config);
@@ -53,8 +53,8 @@ $config = [
     'tracking_api_key' => '自己申请',
 ];
 $params = [
-    'tracking_number' => '10145425944960136xx',
-    'carrier_code'    => 'bestex',
+    'tracking_number' => '物流运单号',// 必填
+    'carrier_code'    => '运输商编码',// 必填
     //... 若干别的信息，可查api文档
 ];
 

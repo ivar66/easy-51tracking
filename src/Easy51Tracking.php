@@ -51,6 +51,7 @@ class Easy51Tracking{
 
     /**
      * get all carrier and carrier code
+     * api doc : https://www.51tracking.com/api-carriers-list-all-carriers
      *
      * @return array
      */
@@ -67,6 +68,7 @@ class Easy51Tracking{
     /**
      * create tracking order
      * api doc：https://www.51tracking.com/api-track-create-a-tracking-item#post
+     *
      * @param array $params
      * @return array
      * @throws InvalidArgumentException
@@ -83,6 +85,7 @@ class Easy51Tracking{
     /**
      * get one order tracking by tracking number
      * api doc：https://www.51tracking.com/api-track-get-a-single-tracking-results#single-get
+     *
      * @param $carrierCode
      * @param $trackingNumber
      * @param string $lang  lang
