@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is kang/easy-51tracking lib exceptions
+ * This file is ivar/easy-51tracking lib exceptions
  *
  * (c) ivar <625079860@qq.com>
  *

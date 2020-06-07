@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the kang/easy-51tracking
+ * This file is part of the ivar/easy-51tracking
  *
  * (c) ivar <625079860@qq.com>
  *

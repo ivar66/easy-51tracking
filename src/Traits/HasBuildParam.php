@@ -2,7 +2,7 @@
 /*
 * This is a new HasBuildParam.php file.
 *
-* (c) ivar <dukang03@baidu.com>
+* (c) ivar <625079860@qq.com>
 * 
 * Date: 2020/6/5 下午9:37
 * 
