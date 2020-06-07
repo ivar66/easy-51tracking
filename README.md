@@ -15,7 +15,6 @@
 
 - [51tracking](https://www.51tracking.com/)
 
-
 ## 环境需求
 
 - PHP >= 5.6
@@ -80,6 +79,7 @@ $obj = new Easy51Tracking($config);
 $result = $obj->getOrderTrackingByNumber($carrier_code,$tracking_number);
 
 ```
+
 ## License
 
 MIT
