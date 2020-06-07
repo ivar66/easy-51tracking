@@ -18,7 +18,8 @@ trait HasBuildParam{
     /**
      * format url
      *
-     * @param $endpoint
+     * @param string $endpoint
+     *
      * @return string
      */
     protected function _buildEndpoint($endpoint){
@@ -28,11 +29,11 @@ trait HasBuildParam{
     /**
      * build create tracking order
      *
-     * @param $params
+     * @param  array $params
      * @return array
      * @throws InvalidArgumentException
      */
-    protected function _buildBuildOrderParams($params){
+    protected function _buildOrderParams($params){
         $res = [];
         $arrField  = [
             'tracking_number'               =>  true,
@@ -52,6 +53,37 @@ trait HasBuildParam{
             'lang'                          =>  false,
             'auto_correct'                  =>  false,
             'comment'                       =>  false,
+        ];
+        foreach ($arrField as $key => $val){
+            if ($val == true && !isset($arrField[$key])){
+                throw new InvalidArgumentException("order must param [{$key}] Not Exist");
+            }
+            if (isset($params[$key])){
+                $res[$key] = $params[$key];
+            }
+        }
+        return $res;
+    }
+
+    /**
+     *
+     * @param array $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     */
+    protected function _buildUpdateOrderParams($params){
+        $res = [];
+        $arrField  = [
+            'title'                         =>  false,
+            'logistics_channel'             =>  false,
+            'customer_name'                 =>  false,
+            'customer_email'                =>  false,
+            'customer_phone'                =>  false,
+            'order_id'                      =>  false,
+            'destination_code'              =>  false,
+            'archived'                      =>  false,
+            'status'                        =>  false,
         ];
         foreach ($arrField as $key => $val){
             if ($val == true && !isset($arrField[$key])){

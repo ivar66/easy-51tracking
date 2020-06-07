@@ -38,6 +38,7 @@ class Easy51Tracking{
 
     /**
      * Easy51Tracking constructor.
+     *
      * @param array $config
      */
     public function __construct(array $config)
@@ -51,6 +52,7 @@ class Easy51Tracking{
 
     /**
      * get all carrier and carrier code
+     *
      * api doc : https://www.51tracking.com/api-carriers-list-all-carriers
      *
      * @return array
@@ -67,15 +69,17 @@ class Easy51Tracking{
 
     /**
      * create tracking order
+     *
      * api doc：https://www.51tracking.com/api-track-create-a-tracking-item#post
      *
      * @param array $params
+     *
      * @return array
      * @throws InvalidArgumentException
      */
     public function create($params = []){
 
-        $arrReq = $this->_buildBuildOrderParams($params);
+        $arrReq = $this->_buildOrderParams($params);
 
         $endpoint = $this->_buildEndpoint('/trackings/post');
 
@@ -86,9 +90,10 @@ class Easy51Tracking{
      * get one order tracking by tracking number
      * api doc：https://www.51tracking.com/api-track-get-a-single-tracking-results#single-get
      *
-     * @param $carrierCode
-     * @param $trackingNumber
-     * @param string $lang  lang
+     * @param  string     $carrierCode
+     * @param  string     $trackingNumber
+     * @param  string     $lang             lang
+     *
      * @return array
      */
     public function getOrderTrackingByNumber($carrierCode,$trackingNumber,$lang = 'cn'){
@@ -96,6 +101,42 @@ class Easy51Tracking{
         $endpoint = $this->_buildEndpoint('/trackings/'.$carrierCode.'/'.$trackingNumber.'/'.$lang);
 
         return $this->get($endpoint,[],$this->header);
+    }
+
+    /**
+     * update one order tracking by tracking number
+     * api doc : https://www.51tracking.com/api-track-update-tracking-item#single-put
+     *
+     * @param string $carrierCode
+     * @param string $trackingNumber
+     * @param array $params
+     *
+     * @return array
+     * @throws InvalidArgumentException
+     */
+    public function updateOneOrderTrackingByNumber($carrierCode,$trackingNumber,$params){
+
+        $arrReq = $this->_buildUpdateOrderParams($params);
+
+        $endpoint = $this->_buildEndpoint('/trackings/'.$carrierCode.'/'.$trackingNumber);
+
+        return $this->putJson($endpoint,$arrReq,$this->header);
+    }
+
+    /**
+     * delete one order tracking by tracking number
+     * api doc : https://www.51tracking.com/api-track-delete-a-tracking-item#single-delete
+     *
+     * @param string $carrierCode
+     * @param string $trackingNumber
+     *
+     * @return array
+     */
+    public function deleteOneOrderTrackingByNumber($carrierCode,$trackingNumber){
+
+        $endpoint = $this->_buildEndpoint('/trackings/'.$carrierCode.'/'.$trackingNumber);
+
+        return $this->delete($endpoint,[],$this->header);
     }
 
 }

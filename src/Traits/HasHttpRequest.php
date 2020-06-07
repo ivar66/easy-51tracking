@@ -73,6 +73,39 @@ trait HasHttpRequest
     }
 
     /**
+     * Make a put request with json params
+     * @param       $endpoint
+     * @param array $params
+     * @param array $headers
+     *
+     * @return array
+     */
+    protected function putJson($endpoint, $params = [], $headers = [])
+    {
+        return $this->request('post', $endpoint, [
+            'headers' => $headers,
+            'json' => $params,
+        ]);
+    }
+
+    /**
+     * Make a delete request.
+     *
+     * @param string $endpoint
+     * @param array  $query
+     * @param array  $headers
+     *
+     * @return array
+     */
+    protected function delete($endpoint, $query = [], $headers = [])
+    {
+        return $this->request('delete', $endpoint, [
+            'headers' => $headers,
+            'query' => $query,
+        ]);
+    }
+
+    /**
      * Make a http request.
      *
      * @param string $method
