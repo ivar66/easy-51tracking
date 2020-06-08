@@ -120,6 +120,11 @@ $result = $obj->deleteOneOrderTrackingByNumber($carrier_code,$tracking_number);
 ```
 
 ## Todo
+- [x] 获取所有运输商
+- [x] 创建单个运单号
+- [x] 更新单个运单号
+- [x] 删除单个运单号
+- [x] 查询单个运单号
 - [ ] 创建多个运单号
 - [ ] 获取多个运单号的物流信息
 - [ ] 获取多个运单号的物流信息
