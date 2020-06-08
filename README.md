@@ -38,7 +38,8 @@ $config = [
 ];
 
 $obj = new Easy51Tracking($config);
-$arrayAllCarriers = $obj->getAllCarriers();
+$result = $obj->getAllCarriers();
+
 ```
 
 创建单个运单号
@@ -62,6 +63,28 @@ $result = $obj->create($params);
 
 ```
 
+更新运单号中部分信息
+```php
+<?php
+
+use Ivar\Easy51Tracking\Easy51Tracking;
+
+$config = [
+    'tracking_api_key' => '自己申请',
+];
+$tracking_number = '物流运单号';
+$carrier_code    = '运输商编码';
+
+$params = [
+    'title' => '这是测试',
+    //... 若干别的信息，可查api文档
+];
+
+$obj = new Easy51Tracking($config);
+$result = $obj->updateOneOrderTrackingByNumber($carrier_code,$tracking_number,$params);
+
+```
+
 列出单个运单号物流信息
 ```php
 
@@ -79,6 +102,37 @@ $obj = new Easy51Tracking($config);
 $result = $obj->getOrderTrackingByNumber($carrier_code,$tracking_number);
 
 ```
+
+删除运单号
+```php
+<?php
+
+use Ivar\Easy51Tracking\Easy51Tracking;
+
+$config = [
+    'tracking_api_key' => '自己申请',
+];
+$tracking_number = '物流运单号';
+$carrier_code    = '运输商编码';
+
+$obj = new Easy51Tracking($config);
+$result = $obj->deleteOneOrderTrackingByNumber($carrier_code,$tracking_number);
+```
+
+## Todo
+- [ ] 创建多个运单号
+- [ ] 获取多个运单号的物流信息
+- [ ] 获取多个运单号的物流信息
+- [ ] 修改多个运单号附加信息。如：订单号，商品标题，快递状态等。
+- [ ] 删除多个运单号
+- [ ] 修改运输商简码
+- [ ] 查询用户剩余额度
+- [ ] 查看不同状态快递数量
+- [ ] 设置部分单号不再更新
+- [ ] 查询收货地址是否偏远
+- [ ] 获取快递时效
+- [ ] 获取空运单号查询结果
+ 
 
 ## License
 

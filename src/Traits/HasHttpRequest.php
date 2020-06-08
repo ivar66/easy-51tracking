@@ -82,7 +82,7 @@ trait HasHttpRequest
      */
     protected function putJson($endpoint, $params = [], $headers = [])
     {
-        return $this->request('post', $endpoint, [
+        return $this->request('put', $endpoint, [
             'headers' => $headers,
             'json' => $params,
         ]);
