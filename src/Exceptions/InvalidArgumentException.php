@@ -11,7 +11,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Ivar\Exceptions\Exceptions;
+namespace Ivar\Easy51Tracking\Exceptions;
 
 /**
  * Class InvalidArgumentException.
