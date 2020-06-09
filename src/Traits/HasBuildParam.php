@@ -11,7 +11,7 @@
 
 namespace Ivar\Easy51Tracking\Traits;
 
-use Ivar\Exceptions\Exceptions\InvalidArgumentException;
+use Ivar\Easy51Tracking\Exceptions\InvalidArgumentException;
 
 trait HasBuildParam{
 

@@ -14,7 +14,7 @@ namespace Ivar\Easy51Tracking;
 
 use Ivar\Easy51Tracking\Support\Config;
 use Ivar\Easy51Tracking\Traits;
-use Ivar\Exceptions\Exceptions\InvalidArgumentException;
+use Ivar\Easy51Tracking\Exceptions\InvalidArgumentException;
 
 class Easy51Tracking{
 
