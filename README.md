@@ -22,7 +22,7 @@
 ## 安装
 
 ```shell
-$ composer require lvar/easy-51tracking
+$ composer require ivar/easy-51tracking
 ```
 
 ## 使用
